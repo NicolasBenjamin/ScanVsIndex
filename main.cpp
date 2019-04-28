@@ -13,7 +13,7 @@ const int row_size = 1000000;
 //Initialisiere spätere Größe des String Arrays eines Eintrages
 const int string_size = 10;
 
-//Initialisiere spätere Größe des String Arrays eines Eintrages
+//Initialisiere Vergleichseinträge für den jeweiligen Scan
 const int scan_int = 8;
 const array<char, string_size> scan_char = {'A','B','C','D','E','F','G','H','I','J'};
 
