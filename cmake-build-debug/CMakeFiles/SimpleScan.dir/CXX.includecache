@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/nicolashoeck/CLionProjects/SimpleScan/main.cpp
+iostream
+-
+vector
+-
+array
+-
+chrono
+-
+random
+-
+
