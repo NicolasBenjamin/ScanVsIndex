@@ -28,6 +28,7 @@
 // Ergebnisse in einfachen Graphen plotten (z.B. Python - mathplotlib in Jupyter Notebook, plotting am besten über pandas in dataframe)
 // Repository für die Gruppe machen und an Betreuer senden, bei ReadMe kurze Anleitung zum Ausführen (ganz kurz gehalten)
 // kleinteilige Dokumentation / Paper nicht notwendig!
+// Beim Vergleich gesamten String vergleichen (und nicht nur einen Char)
 
 // STD muss nicht vor jedem Befehl gesetzt werden
 using namespace std;
