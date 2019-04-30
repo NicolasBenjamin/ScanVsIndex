@@ -4,6 +4,29 @@
 #include <chrono>
 #include <random>
 
+// Feedback:
+// Konstanten in CAPSLOCK
+// 32 Bit Integer (unsigned) verwenden bei Integer Deklarationen
+// namespace std nutzen
+
+// Zukünftig:
+// mehrere String/Int Spalten (z.B. 10), von eine Spalte mit nur demselben Wert bis alle Werte sind distinct (Selektivität)
+// Anzahl distinct Werte pro Spalte genau spezifizieren
+// Vergleichswerte auch zufällig aus generierten Wertebereich holen, damit Compiler nicht optimiert
+// Info: Debug Modus sorgt dafür, dass Compiler nicht optimiert, aber Messungen werden im Release Modus gemacht (hier wird vom Compiler optimiert)
+// Release Modus -O3 Flag im Terminal
+// immer 1000er Trennzeichen nutzen
+// sinnvolle Bestandteile in einzelne Methoden kapseln
+
+// To-Do zum nächsten Mal:
+// Überprüfen, wo bei Ausgabe der Fehler liegt bei der Darstellung der Millisekunden (ms)
+// Aufpassen bei 1024 / Größen
+// Methoden kapseln
+// Mehr Spalten
+// Mehr mit Parametrisierung/Ausgabe beschäftigen
+// Ergebnis/Messausgaben in CSV schreiben, nicht während Messungen in CSV schreiben, sondern erst am Ende gesammelt!
+// Ergebnisse in einfachen Graphen plotten (z.B. Python - mathplotlib in Jupyter Notebook, plotting am besten über pandas in dataframe)
+
 // STD muss nicht vor jedem Befehl gesetzt werden
 using namespace std;
 
@@ -97,9 +120,9 @@ int main() {
 
     // Von David übernommen
     // Metriken für Column 1
-    const auto byte_per_microsecond_column1 = (static_cast<double>(row_size * 4 / duration_column1));
-    const auto gb_per_microsecond_column1 = byte_per_microsecond_column1 / std::pow(1024, 3);
-    const auto gb_per_second_column1 = gb_per_microsecond_column1 * 1'000'000;
+    const auto byte_per_microsecond_column1 = (static_cast<double>(row_size * 4 / (float) duration_column1));
+    const auto gb_per_microsecond_column1 = byte_per_microsecond_column1 / (float)std::pow(1024, 3);
+    const auto gb_per_second_column1 = gb_per_microsecond_column1 * 1'000'000.0f;
 
     const auto rows_count = row_size;
 
@@ -111,9 +134,9 @@ int main() {
 
     // Metriken Column 2
 
-    const auto byte_per_microsecond_column2 = (static_cast<double>(row_size * 4 / duration_column2));
-    const auto gb_per_microsecond_column2 = byte_per_microsecond_column2 / std::pow(1024, 3);
-    const auto gb_per_second_column2 = gb_per_microsecond_column2 * 1'000'000;
+    const auto byte_per_microsecond_column2 = (static_cast<double>(row_size * 4 / (float) duration_column2));
+    const auto gb_per_microsecond_column2 = byte_per_microsecond_column2 / (float)std::pow(1024, 3);
+    const auto gb_per_second_column2 = gb_per_microsecond_column2 * 1'000'000.0f;
 
     const auto rows_count_column2 = row_size;
 
@@ -122,6 +145,9 @@ int main() {
               //"\nSelectivity: " << selectivity <<
               "\nDuration: " << static_cast<double>(duration_column2) / 1'000 << " ms" <<
               "\nBandwith: " << gb_per_second_column2 << " GB/s\n";
+
+    cout << "Counter 1: " << counter_1 << endl;
+    cout << "Counter 2: " << counter_2 << endl;
 
     return 0;
 
