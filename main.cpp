@@ -26,6 +26,7 @@
 // Mehr mit Parametrisierung/Ausgabe beschäftigen
 // Ergebnis/Messausgaben in CSV schreiben, nicht während Messungen in CSV schreiben, sondern erst am Ende gesammelt!
 // Ergebnisse in einfachen Graphen plotten (z.B. Python - mathplotlib in Jupyter Notebook, plotting am besten über pandas in dataframe)
+// Repository für die Gruppe machen und an Betreuer senden
 
 // STD muss nicht vor jedem Befehl gesetzt werden
 using namespace std;
