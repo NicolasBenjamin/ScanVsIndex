@@ -29,6 +29,7 @@
 // Repository für die Gruppe machen und an Betreuer senden, bei ReadMe kurze Anleitung zum Ausführen (ganz kurz gehalten)
 // kleinteilige Dokumentation / Paper nicht notwendig!
 // Beim Vergleich gesamten String vergleichen (und nicht nur einen Char)
+// To-Dos unter uns aufteilen, auf gemeinsames CSV Format
 
 // STD muss nicht vor jedem Befehl gesetzt werden
 using namespace std;
